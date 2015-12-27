@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="892a531976d54636b3273f5fbd052b16" Name="Diagram1">
+        <EntityTypeShape EntityType="HomeMngmentDBModel.Category" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.Expense" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.ExpenseType" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.Fund" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.MonthlyIncome" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.MonthPlan" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.Month" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.ServiceProvider" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.SpecialEvent" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.Asset" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.IncomeSrc" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="HomeMngmentDBModel.FK_Users_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="HomeMngmentDBModel.FK_Users_Users1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.work_expenses_in" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="HomeMngmentDBModel.work_expenses_out" Width="1.5" PointX="9.375" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

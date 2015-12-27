@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HomeMngmentDBModelStoreContainer" CdmEntityContainer="HomeMngmentDBEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.Expense">
+        <MappingFragment StoreEntitySet="Expense">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InsertionDate" ColumnName="InsertionDate" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Person" ColumnName="Person" />
+          <ScalarProperty Name="ExpenseType" ColumnName="ExpenseType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Payments" ColumnName="Payments" />
+          <ScalarProperty Name="IsLuxury" ColumnName="IsLuxury" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Regular" ColumnName="Regular" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpenseTypes">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.ExpenseType">
+        <MappingFragment StoreEntitySet="ExpenseType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funds">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.Fund">
+        <MappingFragment StoreEntitySet="Funds">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonthlyIncomes">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.MonthlyIncome">
+        <MappingFragment StoreEntitySet="MonthlyIncome">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="IncomeSrc" ColumnName="IncomeSrc" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonthPlans">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.MonthPlan">
+        <MappingFragment StoreEntitySet="MonthPlan">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="ItayIncomePaycheck" ColumnName="ItayIncomePaycheck" />
+          <ScalarProperty Name="ReutIncomePaycheck" ColumnName="ReutIncomePaycheck" />
+          <ScalarProperty Name="OtherIncome" ColumnName="OtherIncome" />
+          <ScalarProperty Name="RentIncomeRamachal1" ColumnName="RentIncomeRamachal1" />
+          <ScalarProperty Name="RentIncomeRamachal4" ColumnName="RentIncomeRamachal4" />
+          <ScalarProperty Name="ItayLuxuryBudget" ColumnName="ItayLuxuryBudget" />
+          <ScalarProperty Name="ReutLuxuryBudget" ColumnName="ReutLuxuryBudget" />
+          <ScalarProperty Name="MonthSavingDestination" ColumnName="MonthSavingDestination" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Months">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.Month">
+        <MappingFragment StoreEntitySet="Months">
+          <ScalarProperty Name="MonthNumber" ColumnName="MonthNumber" />
+          <ScalarProperty Name="MonthName" ColumnName="MonthName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceProviders">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.ServiceProvider">
+        <MappingFragment StoreEntitySet="ServiceProviders">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ServiceLocation" ColumnName="ServiceLocation" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="MonthlyPrice" ColumnName="MonthlyPrice" />
+          <ScalarProperty Name="SupplierContactDetails" ColumnName="SupplierContactDetails" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecialEvents">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.SpecialEvent">
+        <MappingFragment StoreEntitySet="SpecialEvents">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="EventPrice" ColumnName="EventPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Assets">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.Asset">
+        <MappingFragment StoreEntitySet="Assets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncomeSrcs">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.IncomeSrc">
+        <MappingFragment StoreEntitySet="IncomeSrc">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_expenses_in">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.work_expenses_in">
+        <MappingFragment StoreEntitySet="work_expenses_in">
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="work_expenses_out">
+      <EntityTypeMapping TypeName="HomeMngmentDBModel.work_expenses_out">
+        <MappingFragment StoreEntitySet="work_expenses_out">
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

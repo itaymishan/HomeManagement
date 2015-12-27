@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HomeMngmentDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InsertionDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Category" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Person" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ExpenseType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="Payments" Type="Int32" />
+    <Property Name="IsLuxury" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Regular" Type="Int32" />
+    <Property Name="Currency" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ExpenseType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fund">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MonthlyIncome">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="IncomeSrc" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Currency" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MonthPlan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Month" Type="Int32" Nullable="false" />
+    <Property Name="ItayIncomePaycheck" Type="Int32" Nullable="false" />
+    <Property Name="ReutIncomePaycheck" Type="Int32" Nullable="false" />
+    <Property Name="OtherIncome" Type="Int32" />
+    <Property Name="RentIncomeRamachal1" Type="Int32" />
+    <Property Name="RentIncomeRamachal4" Type="Int32" />
+    <Property Name="ItayLuxuryBudget" Type="Int32" Nullable="false" />
+    <Property Name="ReutLuxuryBudget" Type="Int32" Nullable="false" />
+    <Property Name="MonthSavingDestination" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Month">
+    <Key>
+      <PropertyRef Name="MonthNumber" />
+    </Key>
+    <Property Name="MonthNumber" Type="Int32" Nullable="false" />
+    <Property Name="MonthName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceProvider">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceLocation" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="ServiceType" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="SupplierName" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="StartDate" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="EndDate" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MonthlyPrice" Type="Int16" />
+    <Property Name="SupplierContactDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SpecialEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Month" Type="Int16" Nullable="false" />
+    <Property Name="Year" Type="Int16" Nullable="false" />
+    <Property Name="EventDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EventPrice" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users1" Relationship="Self.FK_Users_Users" FromRole="Users" ToRole="Users1" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_Users_Users" FromRole="Users1" ToRole="Users" />
+    <NavigationProperty Name="Users11" Relationship="Self.FK_Users_Users1" FromRole="Users" ToRole="Users1" />
+    <NavigationProperty Name="User2" Relationship="Self.FK_Users_Users1" FromRole="Users1" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Asset">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IncomeSrc">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Users_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Users1" Type="Self.User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users1">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Users1" Type="Self.User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HomeMngmentDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Expenses" EntityType="Self.Expense" />
+    <EntitySet Name="ExpenseTypes" EntityType="Self.ExpenseType" />
+    <EntitySet Name="Funds" EntityType="Self.Fund" />
+    <EntitySet Name="MonthlyIncomes" EntityType="Self.MonthlyIncome" />
+    <EntitySet Name="MonthPlans" EntityType="Self.MonthPlan" />
+    <EntitySet Name="Months" EntityType="Self.Month" />
+    <EntitySet Name="ServiceProviders" EntityType="Self.ServiceProvider" />
+    <EntitySet Name="SpecialEvents" EntityType="Self.SpecialEvent" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Assets" EntityType="Self.Asset" />
+    <EntitySet Name="IncomeSrcs" EntityType="Self.IncomeSrc" />
+    <AssociationSet Name="FK_Users_Users" Association="Self.FK_Users_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users1" Association="Self.FK_Users_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="work_expenses_in" EntityType="HomeMngmentDBModel.work_expenses_in" />
+    <EntitySet Name="work_expenses_out" EntityType="HomeMngmentDBModel.work_expenses_out" />
+  </EntityContainer>
+  <EntityType Name="work_expenses_in">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <Property Name="currency" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="work_expenses_out">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <Property Name="currency" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
