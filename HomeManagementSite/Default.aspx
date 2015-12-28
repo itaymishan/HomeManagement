@@ -184,6 +184,8 @@
                     <RowStyle HorizontalAlign="Right" />
                 </asp:GridView>
             </p>
+            <p>
+                &nbsp;</p>
         </div>
         <div class="col-md-4">
             <h2 style="background:pink">Bussiness Expenses</h2>

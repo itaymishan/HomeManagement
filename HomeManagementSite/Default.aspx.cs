@@ -339,7 +339,7 @@ namespace HomeManagementSite
             }
             else if (e.Row.RowType == DataControlRowType.Footer)
             {
-                e.Row.Cells[0].Text = "Total Sum:";
+                e.Row.Cells[0].Text = "Total:";
                 e.Row.Cells[2].Text = totalAmount_income_calc.ToString();
                 e.Row.Font.Bold = true;
                 totalAmount_income_calc = 0;
