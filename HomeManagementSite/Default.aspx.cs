@@ -204,6 +204,7 @@ namespace HomeManagementSite
                 int amount = Convert.ToInt32(e.Row.Cells[2].Text);
                 string from = e.Row.Cells[1].Text;
                 string to = (((Global)this.Context.ApplicationInstance).ActiveCurrency);
+                e.Row.ToolTip = GetTooltipData(e.Row);
                 totalAmount_expense_calc += GetEntryValueBasedOnActiveCurrency(amount, from, to);
             }
             else if (e.Row.RowType == DataControlRowType.Footer)
@@ -321,6 +322,34 @@ namespace HomeManagementSite
                 totalsIncomeAmount = totalAmount_income_calc;
                 totalAmount_income_calc = 0;
             }
+        }
+
+        private string GetTooltipData(GridViewRow row)
+        {
+            string toolTipData = String.Empty;
+            category = row.Cells[0].Text.Trim();
+            person = drpPersonMain.SelectedValue.Trim().Equals("הכל") ? null : drpPersonMain.SelectedValue;
+            month = drpMonthMain.SelectedValue.Trim().Equals("הכל") ? 0 : Convert.ToInt32(drpMonthMain.SelectedValue);
+            year = drpYearMain.SelectedValue.Trim().Equals("הכל") ? 0 : Convert.ToInt32(drpYearMain.SelectedValue);
+
+            using (var ctx = new HomeMngmentDBEntities())
+            {
+                if (chkbxGroupExpense.Checked)
+                {
+                    var query = from ex in ctx.Expenses
+                                where (ex.Month == month || month == 0) &&
+                                        (year == ex.Year || year == 0) &&
+                                        (string.IsNullOrEmpty(category) || ex.Category == category) &&
+                                        (string.IsNullOrEmpty(person) || ex.Person == person)
+                                select new { ex.Comments, ex.Currency, ex.Amount, ex.Person, ex.Category, ex.Id };
+                    var arr = query.ToArray();
+                    foreach(var tmp in arr)
+                    {
+                        toolTipData += tmp.Amount + "-" + tmp.Comments + Environment.NewLine;
+                    }
+                }
+            }
+            return toolTipData;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
