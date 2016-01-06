@@ -36,20 +36,6 @@ namespace HomeManagementSite
             return result;
         }
 
-        //public static Dictionary<string, double> convRates = new Dictionary<string, double>() {
-        //    { "ILSCAD", 0.36 },
-        //    { "ILSUSD", 0.26 },
-        //    {"CADILS", 2.81 },
-        //    { "CADUSD", 0.73 },
-
-        //    { "USDCAD", 1.37 },
-        //    { "USDILS", 3.85 },
-
-        //    { "USDUSD", 1 },
-        //    { "CADCAD", 1 },
-        //    { "ILSILS", 1 }
-        //};
-
         public static Dictionary<string, double> convRates = new Dictionary<string, double>();
 
         public static double GetConvertionRate(string fromCurrency, string toCurrency)
