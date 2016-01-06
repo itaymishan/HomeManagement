@@ -204,13 +204,11 @@ namespace HomeManagementSite
                 int amount = Convert.ToInt32(e.Row.Cells[2].Text);
                 string from = e.Row.Cells[1].Text;
                 string to = (((Global)this.Context.ApplicationInstance).ActiveCurrency);
-
                 e.Row.ToolTip = GetTooltipData(e.Row);
                 // when mouse is over the row, save original color to new attribute, and change it to highlight color
-                e.Row.Attributes.Add("onmouseover", "this.originalstyle=this.style.backgroundColor;this.style.backgroundColor='#EEFFAA'");
+                e.Row.Attributes.Add("onmouseover","this.originalstyle=this.style.backgroundColor; this.style.backgroundColor='#EEFFAA';");
                 // when mouse leaves the row, change the bg color to its original value   
                 e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor=this.originalstyle;");
-
                 totalAmount_expense_calc += GetEntryValueBasedOnActiveCurrency(amount, from, to);
             }
             else if (e.Row.RowType == DataControlRowType.Footer)
@@ -351,7 +349,7 @@ namespace HomeManagementSite
                     var arr = query.ToArray();
                     foreach(var tmp in arr)
                     {
-                        toolTipData += tmp.Amount + "-" + tmp.Comments + Environment.NewLine;
+                        toolTipData += tmp.Amount + " : " + tmp.Comments + Environment.NewLine;
                     }
                 }
             }
