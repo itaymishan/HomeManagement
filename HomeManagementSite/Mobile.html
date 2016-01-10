@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+    <title>My WebApp</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+    <link rel="stylesheet" href="WebApp/Design/Render.css" />
+    <script type="text/javascript" src="WebApp/Action/Logic.js"></script>
+
+</head>
+
+<body>
+    <div id="WebApp">
+
+        <div id="iHeader">
+            <a href="#" id="waBackButton">Back</a>
+            <span id="waHeadTitle">WebApp Demo</span>
+        </div>
+
+        <div id="iGroup">
+
+            <div class="iLayer" id="waHome" title="Home">
+                <div class="iBlock">
+                    <h1>Layer 1</h1>
+                    <p>
+                        This is the first layer. <a href="#_Next">Tap here</a> to slide to the next layer.
+                        A back button will then appear in the header.
+                    </p>
+                </div>
+            </div>
+
+            <div class="iLayer" id="waNext" title="Next Layer">
+                <div class="iBlock">
+                    <h1>Layer 2</h1>
+                    <p>
+                        This is the second layer. <a href="#_Home">Tap here</a> to go back to the previous
+                        layer or press the top back button.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

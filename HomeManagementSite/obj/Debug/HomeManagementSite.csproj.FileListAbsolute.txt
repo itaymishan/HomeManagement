@@ -231,6 +231,6 @@ E:\Git\Home_Managment\HomeManagementSite\bin\Microsoft.Owin.Security.Google.xml
 E:\Git\Home_Managment\HomeManagementSite\bin\Microsoft.Owin.Security.Twitter.xml
 E:\Git\Home_Managment\HomeManagementSite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\Git\Home_Managment\HomeManagementSite\bin\Microsoft.Owin.Security.OAuth.xml
-E:\Git\Home_Managment\HomeManagementSite\obj\Debug\HomeManagementSite.csprojResolveAssemblyReference.cache
 E:\Git\Home_Managment\HomeManagementSite\obj\Debug\HomeManagementSite.dll
 E:\Git\Home_Managment\HomeManagementSite\obj\Debug\HomeManagementSite.pdb
+E:\Git\Home_Managment\HomeManagementSite\obj\Debug\HomeManagementSite.csprojResolveAssemblyReference.cache
