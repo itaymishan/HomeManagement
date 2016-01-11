@@ -119,7 +119,11 @@
             <div class="iLayer" id="waViewSummary" title="View Summary Layer">
                 <div class="iBlock">
                 <h1>View Summary</h1>
-
+                </div>
+            </div>
+            <div class="iLayer" id="waInsertBusinessExpense" title="Insert to bucket">
+                <div class="iBlock">
+                <h1>View Summary</h1>
                 </div>
             </div>
         </div>
