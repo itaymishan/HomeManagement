@@ -13,10 +13,10 @@
             <div class="iLayer" id="waHome" title="Home">
                 <div class="iMenu">
                     <h3>Choose Action</h3>
-                    <ul>
-                        <li><a href="#_InsertExpense">Insert Expense</a></li>
-                        <li><a href="#_QuickInsert">Quick Insert</a></li>
-                        <li><a href="#_ViewSummary">View Summary</a></li>
+                    <ul class="iArrow">
+                        <li><a href="#_InsertExpense"><img src="http://www.lessystems.com/wp-content/uploads/2014/04/n2f-travel-expenses-report-icon.png" height="42" width="42"/>Insert Expense</a></li>
+                        <li><a href="#_QuickInsert"><img src="http://descargar.info/wp-content/uploads/2014/01/My-Fast-VPN.png" height="42" width="42"/>Quick Insert</a></li>
+                        <li><a href="#_ViewSummary"><img src="https://cdn2.iconfinder.com/data/icons/multimedia-17/80/list_summary_options_preferences_app_ui_menu-128.png" height="42" width="42"/>View Summary</a></li>
                     </ul>
                 </div>
             </div>
