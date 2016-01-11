@@ -40,6 +40,15 @@ namespace HomeManagementSite {
         protected global::System.Web.UI.WebControls.ImageButton btnElectricityBill;
         
         /// <summary>
+        /// btnZipCar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnZipCar;
+        
+        /// <summary>
         /// btnInternetBill control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace HomeManagementSite {
         protected global::System.Web.UI.WebControls.ImageButton btnPartyRest;
         
         /// <summary>
+        /// btnVaction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnVaction;
+        
+        /// <summary>
         /// btnMortgage control.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,24 @@ namespace HomeManagementSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnMortgage;
+        
+        /// <summary>
+        /// btnTTC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnTTC;
+        
+        /// <summary>
+        /// btnCellular control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnCellular;
         
         /// <summary>
         /// drpCategory control.

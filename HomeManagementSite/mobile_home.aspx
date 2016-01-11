@@ -22,7 +22,7 @@
             </div>
             <div class="iLayer" id="waQuickInsert" title="Quick Insert">
                 <div class="iBlock">
-                    <h1><asp:TextBox ID="txtAmountQuickInsert" runat="server" Font-Size="Large" Width="50px"></asp:TextBox></h1>
+                    <h1><asp:TextBox ID="txtAmountQuickInsert" runat="server" Font-Size="Large" Width="50px" ValidationGroup="quickInsert"></asp:TextBox></h1>
                     <table style="width: 100%;">
                         <tr>
                             <td><asp:ImageButton ID="btnGroceryMobile" runat="server" ImageUrl="https://d30y9cdsu7xlg0.cloudfront.net/png/28468-200.png" Height="70px" Width="70px"/></td>
@@ -37,7 +37,7 @@
                         <tr>
                             <td><asp:ImageButton ID="btnMortgage" runat="server" ImageUrl="http://media.point2.com/p2a/htmltext/092c/05f5/eca0/fa98fd4f9c04e7f26ac3/original.png" Height="70px" Width="70px"/></td>
                             <td><asp:ImageButton ID="btnTTC" runat="server" ImageUrl="https://hookmeup.files.wordpress.com/2011/01/ttc-logo.png?w=600" Height="70px" Width="70px" /></td>
-                            <td><asp:ImageButton ID="btnCellular" runat="server" ImageUrl="https://pixabay.com/static/uploads/photo/2012/04/26/12/55/cell-42403_640.png" Height="70px" Width="70px" /></td>
+                            <td><asp:ImageButton ID="btnCellular" runat="server" ImageUrl="http://images.clipartpanda.com/phone-clipart-mobile-phone-md.png" Height="70px" Width="70px" /></td>
                         </tr>
                     </table>
                 </div>
