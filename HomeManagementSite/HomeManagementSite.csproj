@@ -214,6 +214,80 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="mobile_home.aspx" />
+    <Content Include="WebApp\Action\Logic.js" />
+    <Content Include="WebApp\Design\Img\bg-head.png" />
+    <Content Include="WebApp\Design\Img\bg-shop.png" />
+    <Content Include="WebApp\Design\Img\bg-switch-thumb.png" />
+    <Content Include="WebApp\Design\Img\bg-switch.png" />
+    <Content Include="WebApp\Design\Img\bg-tab-sel.png" />
+    <Content Include="WebApp\Design\Img\bg-tab-touch.png" />
+    <Content Include="WebApp\Design\Img\bg-tab.png" />
+    <Content Include="WebApp\Design\Img\bg-title.png" />
+    <Content Include="WebApp\Design\Img\bg.png" />
+    <Content Include="WebApp\Design\Img\big-button-grey.png" />
+    <Content Include="WebApp\Design\Img\big-button-red-touch.png" />
+    <Content Include="WebApp\Design\Img\big-button-red.png" />
+    <Content Include="WebApp\Design\Img\big-button-select.png" />
+    <Content Include="WebApp\Design\Img\big-button-white.png" />
+    <Content Include="WebApp\Design\Img\bullet-media.png" />
+    <Content Include="WebApp\Design\Img\button-back-touch.png" />
+    <Content Include="WebApp\Design\Img\button-back.png" />
+    <Content Include="WebApp\Design\Img\button-bg.png" />
+    <Content Include="WebApp\Design\Img\button-blue.png" />
+    <Content Include="WebApp\Design\Img\button-light.png" />
+    <Content Include="WebApp\Design\Img\button-red.png" />
+    <Content Include="WebApp\Design\Img\button-simple-touch.png" />
+    <Content Include="WebApp\Design\Img\button-simple.png" />
+    <Content Include="WebApp\Design\Img\check-dis.png" />
+    <Content Include="WebApp\Design\Img\check-sel.png" />
+    <Content Include="WebApp\Design\Img\check.png" />
+    <Content Include="WebApp\Design\Img\chevron-select.png" />
+    <Content Include="WebApp\Design\Img\chevron.png" />
+    <Content Include="WebApp\Design\Img\form-check-text.png" />
+    <Content Include="WebApp\Design\Img\form-check-texton.png" />
+    <Content Include="WebApp\Design\Img\form-head.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x1.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x10.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x11.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x12.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x2.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x3.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x4.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x5.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x6.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x7.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x8.png" />
+    <Content Include="WebApp\Design\Img\loader-gray-100x12x9.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x1.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x10.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x11.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x12.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x2.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x3.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x4.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x5.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x6.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x7.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x8.png" />
+    <Content Include="WebApp\Design\Img\loader-white-100x12x9.png" />
+    <Content Include="WebApp\Design\Img\next.png" />
+    <Content Include="WebApp\Design\Img\rtl-bullet-media.png" />
+    <Content Include="WebApp\Design\Img\rtl-button-back-touch.png" />
+    <Content Include="WebApp\Design\Img\rtl-button-back.png" />
+    <Content Include="WebApp\Design\Img\rtl-chevron-select.png" />
+    <Content Include="WebApp\Design\Img\rtl-chevron.png" />
+    <Content Include="WebApp\Design\Img\select.png" />
+    <Content Include="WebApp\Design\Img\tab-bg-select.png" />
+    <Content Include="WebApp\Design\Render.css" />
+    <Content Include="WebApp\Design\RenderRTL.css" />
+    <Content Include="WebApp\Img\down.png" />
+    <Content Include="WebApp\Img\less.png" />
+    <Content Include="WebApp\Img\mas.png" />
+    <Content Include="WebApp\Img\menos.png" />
+    <Content Include="WebApp\Img\more.png" />
+    <Content Include="WebApp\Img\next.png" />
+    <Content Include="WebApp\Img\up.png" />
     <EntityDeploy Include="HomeDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>HomeDB.Designer.cs</LastGenOutput>
@@ -451,6 +525,13 @@
     <Compile Include="IncomeSrc.cs">
       <DependentUpon>HomeDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="mobile_home.aspx.cs">
+      <DependentUpon>mobile_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobile_home.aspx.designer.cs">
+      <DependentUpon>mobile_home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Month.cs">
       <DependentUpon>HomeDB.tt</DependentUpon>
@@ -502,9 +583,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="WebApp\Action\" />
-    <Folder Include="WebApp\Design\" />
-    <Folder Include="WebApp\Img\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
