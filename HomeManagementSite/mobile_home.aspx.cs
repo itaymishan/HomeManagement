@@ -34,5 +34,38 @@ namespace HomeManagementSite
             }
             lblInsertStatus.Text = "Success";
         }
+        
+        protected void btnInsertQuickExpenseMobile_Click(object sender, EventArgs e)
+        {
+            Expense ex = new Expense();
+            ex.Year = Convert.ToInt32(drpYear.SelectedValue);
+            ex.Month = Convert.ToInt32(drpMonth.SelectedValue);
+            ex.Currency = drpCurrency.SelectedValue;
+            
+            switch(sender)
+            {
+                case 0:
+                {
+                    ex.Category = drpCategory.SelectedValue;
+                    ex.Comments = txtComments.Text;
+                    ex.Amount = Convert.ToInt32(txtAmount.Text);
+                    ex.IsLuxury = chkbxIsLuxury.Checked ? "כן" : "לא";
+                    ex.Person = drpPerson.Text;
+                    ex.ExpenseType = drpExpensetype.SelectedValue;
+                }
+                break;
+                case 1:
+                break;
+                defualt:
+                break;
+            }
+
+            using (var ctx = new HomeMngmentDBEntities())
+            {
+                ctx.Expenses.Add(ex);
+                ctx.SaveChanges();
+            }
+            lblInsertStatus.Text = "Success";
+        }
     }
 }
