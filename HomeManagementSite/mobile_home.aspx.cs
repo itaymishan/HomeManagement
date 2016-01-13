@@ -13,6 +13,26 @@ namespace HomeManagementSite
         {
 
         }
+        
+        protected Expense BuildQuickExpense(sender)
+        {
+            if (hiddenFieldAmount.Value == "")
+                return;
+            ImageButton button  = (ImageButton)sender;
+            string buttonId     = button.ID;
+            Expense ex          = new Expense();
+            ex.Year             = Convert.ToInt32(drpYear.SelectedValue);
+            ex.Month            = Convert.ToInt32(drpMonth.SelectedValue);
+            ex.Currency         = drpCurrency.SelectedValue;
+            
+            switch(buttonId)
+            {
+                case "":
+                break;
+                default:
+                break;
+            }
+        }
 
         protected void btnInsertExpenseMobile_Click(object sender, EventArgs e)
         {
