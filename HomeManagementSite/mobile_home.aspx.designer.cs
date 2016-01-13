@@ -13,13 +13,13 @@ namespace HomeManagementSite {
     public partial class mobile_home {
         
         /// <summary>
-        /// txtAmountQuickInsert control.
+        /// hiddenFieldAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAmountQuickInsert;
+        protected global::System.Web.UI.WebControls.HiddenField hiddenFieldAmount;
         
         /// <summary>
         /// btnGroceryMobile control.

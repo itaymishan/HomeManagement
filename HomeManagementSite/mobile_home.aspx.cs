@@ -37,27 +37,27 @@ namespace HomeManagementSite
         
         protected void btnInsertQuickExpenseMobile_Click(object sender, EventArgs e)
         {
-            Expense ex = new Expense();
-            ex.Year = Convert.ToInt32(drpYear.SelectedValue);
-            ex.Month = Convert.ToInt32(drpMonth.SelectedValue);
+            if (hiddenFieldAmount.Value == "")
+                return;
+            ImageButton button = (ImageButton)sender;
+            string buttonId = button.ID;
+            Expense ex  = new Expense();
+            ex.Year     = Convert.ToInt32(drpYear.SelectedValue);
+            ex.Month    = Convert.ToInt32(drpMonth.SelectedValue);
             ex.Currency = drpCurrency.SelectedValue;
-            
-            switch(sender)
+
+            switch (buttonId)
             {
-                case 0:
-                {
-                    ex.Category = drpCategory.SelectedValue;
-                    ex.Comments = txtComments.Text;
-                    ex.Amount = Convert.ToInt32(txtAmount.Text);
-                    ex.IsLuxury = chkbxIsLuxury.Checked ? "כן" : "לא";
-                    ex.Person = drpPerson.Text;
-                    ex.ExpenseType = drpExpensetype.SelectedValue;
-                }
-                break;
-                case 1:
-                break;
-                defualt:
-                break;
+                case "btnZipCar":
+                    {
+                        ex.Category     = "ZipCar";
+                        ex.Comments     = txtComments.Text;
+                        ex.Amount       = Convert.ToInt32(hiddenFieldAmount.Value);
+                        ex.IsLuxury     =  "לא";
+                        ex.Person       = "איתי";
+                        ex.ExpenseType  = "משותף";
+                    }
+                    break;
             }
 
             using (var ctx = new HomeMngmentDBEntities())

@@ -16,10 +16,10 @@
                     <ul class="iArrow">
                         <li><a href="#_InsertExpense"><img src="http://www.lessystems.com/wp-content/uploads/2014/04/n2f-travel-expenses-report-icon.png" height="42" width="42"/>Insert Expense</a></li>
                         <li><a href="#_QuickInsert"><img src="http://descargar.info/wp-content/uploads/2014/01/My-Fast-VPN.png" height="42" width="42"/>Quick Insert</a></li>
-                        <li><a href="#_ViewSummary"><img src="https://cdn2.iconfinder.com/data/icons/multimedia-17/80/list_summary_options_preferences_app_ui_menu-128.png" height="42" width="42"/>View Summary</a></li>
-                        <li><a href="#_InsertIncome"><img src="" height="42" width="42"/>View Summary</a></li>
-                        <li><a href="#_InsertBusinessExpense"><img src="" height="42" width="42"/>View Summary</a></li>
-                        <li><a href="#_x3"><img src="" height="42" width="42"/>View Summary</a></li>
+                        <li><a href="#_ViewSummary"><img src="https://cdn2.iconfinder.com/data/icons/multimedia-17/80/list_summary_options_preferences_app_ui_menu-128.png" height="42" width="42"/>Month Totals</a></li>
+                        <li><a href="#_InsertIncome"><img src="http://images.clipartpanda.com/coin-clip-art-acq7ygzcM.png" height="42" width="42"/>View Summary</a></li>
+                        <li><a href="#_InsertBusinessExpense"><img src="/" height="42" width="42"/>View Summary</a></li>
+                        <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
                     </ul>
                 </div>
             </div>
@@ -40,12 +40,21 @@
             </div>
             <div class="iLayer" id="waQuickInsert" title="Quick Insert">
                 <div class="iBlock">
-                    <h1><asp:TextBox ID="txtAmountQuickInsert" runat="server" Font-Size="Large" Width="50px" ValidationGroup="quickInsert"></asp:TextBox></h1>
+                    <asp:HiddenField ID="hiddenFieldAmount" runat="server" />
+                    <script>
+                    function myFunction() {
+                        var amount = prompt("Please enter amount:");
+                        if (amount != null) {
+                            document.getElementById("<%=hiddenFieldAmount.ClientID%>").value = amount;
+                        }
+                    }
+                    </script>
+
                     <table style="width: 100%;">
                         <tr>
                             <td><asp:ImageButton ID="btnGroceryMobile" runat="server" ImageUrl="https://d30y9cdsu7xlg0.cloudfront.net/png/28468-200.png" Height="70px" Width="70px"/></td>
                             <td><asp:ImageButton ID="btnElectricityBill" runat="server" ImageUrl="http://js.syncfusion.com/UG/Web/Content/electricity.png" Height="70px" Width="70px" /></td>
-                            <td><asp:ImageButton ID="btnZipCar" runat="server" ImageUrl="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Zipcar_Logo.svg/399px-Zipcar_Logo.svg.png" Height="70px" Width="70px" /></td>
+                            <td><asp:ImageButton ID="btnZipCar" runat="server" OnClientClick="myFunction()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Zipcar_Logo.svg/399px-Zipcar_Logo.svg.png" Height="70px" Width="70px" /></td>
                             <td></td>
                         </tr>
                         <tr>
