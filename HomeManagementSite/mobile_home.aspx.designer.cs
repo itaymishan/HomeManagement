@@ -22,13 +22,22 @@ namespace HomeManagementSite {
         protected global::System.Web.UI.WebControls.HiddenField hiddenFieldAmount;
         
         /// <summary>
-        /// btnGroceryMobile control.
+        /// hiddenFieldComments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnGroceryMobile;
+        protected global::System.Web.UI.WebControls.HiddenField hiddenFieldComments;
+        
+        /// <summary>
+        /// btnGrocery control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnGrocery;
         
         /// <summary>
         /// btnElectricityBill control.

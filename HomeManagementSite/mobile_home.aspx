@@ -4,6 +4,18 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+<script>
+    function PopUpAmountComments() {
+    var amount = prompt("Please enter amount:");
+    var comments = prompt("Please enter comments:");
+    if (amount != null) {
+        document.getElementById("<%=hiddenFieldAmount.ClientID%>").value = amount;
+    }
+    if (comments != null) {
+        document.getElementById("<%=hiddenFieldComments.ClientID%>").value = comments;
+    }
+}
+</script>
     <div id="WebApp">
         <div id="iHeader">
             <a href="#" id="waBackButton">Back</a>
@@ -18,7 +30,7 @@
                         <li><a href="#_QuickInsert"><img src="http://descargar.info/wp-content/uploads/2014/01/My-Fast-VPN.png" height="42" width="42"/>Quick Insert</a></li>
                         <li><a href="#_ViewSummary"><img src="https://cdn2.iconfinder.com/data/icons/multimedia-17/80/list_summary_options_preferences_app_ui_menu-128.png" height="42" width="42"/>Month Totals</a></li>
                         <li><a href="#_InsertIncome"><img src="http://images.clipartpanda.com/coin-clip-art-acq7ygzcM.png" height="42" width="42"/>View Summary</a></li>
-                        <li><a href="#_InsertBusinessExpense"><img src="/" height="42" width="42"/>View Summary</a></li>
+                        <li><a href="#_InsertBusinessExpense"><img src="https://machetera.files.wordpress.com/2008/05/cash_bucket.png" height="42" width="42"/>View Summary</a></li>
                         <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
                     </ul>
                 </div>
@@ -41,32 +53,25 @@
             <div class="iLayer" id="waQuickInsert" title="Quick Insert">
                 <div class="iBlock">
                     <asp:HiddenField ID="hiddenFieldAmount" runat="server" />
-                    <script>
-                    function myFunction() {
-                        var amount = prompt("Please enter amount:");
-                        if (amount != null) {
-                            document.getElementById("<%=hiddenFieldAmount.ClientID%>").value = amount;
-                        }
-                    }
-                    </script>
+                    <asp:HiddenField ID="hiddenFieldComments" runat="server" />
 
                     <table style="width: 100%;">
                         <tr>
-                            <td><asp:ImageButton ID="btnGroceryMobile" runat="server" ImageUrl="https://d30y9cdsu7xlg0.cloudfront.net/png/28468-200.png" Height="70px" Width="70px"/></td>
-                            <td><asp:ImageButton ID="btnElectricityBill" runat="server" ImageUrl="http://js.syncfusion.com/UG/Web/Content/electricity.png" Height="70px" Width="70px" /></td>
-                            <td><asp:ImageButton ID="btnZipCar" runat="server" OnClientClick="myFunction()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Zipcar_Logo.svg/399px-Zipcar_Logo.svg.png" Height="70px" Width="70px" /></td>
+                            <td><asp:ImageButton ID="btnGrocery" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="https://d30y9cdsu7xlg0.cloudfront.net/png/28468-200.png" Height="70px" Width="70px"/></td>
+                            <td><asp:ImageButton ID="btnElectricityBill" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="http://js.syncfusion.com/UG/Web/Content/electricity.png" Height="70px" Width="70px" /></td>
+                            <td><asp:ImageButton ID="btnZipCar" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Zipcar_Logo.svg/399px-Zipcar_Logo.svg.png" Height="70px" Width="70px" /></td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td><asp:ImageButton ID="btnInternetBill" runat="server" ImageUrl="http://findicons.com/files/icons/1741/170_dock/256/wifi.png" Height="70px" Width="70px" /></td>
-                            <td><asp:ImageButton ID="btnPartyRest" runat="server" ImageUrl="http://www.icone-png.com/png/29/28791.png" Height="70px" Width="70px"/></td>
-                            <td><asp:ImageButton ID="btnVaction" runat="server" ImageUrl="http://icons.iconarchive.com/icons/visualpharm/vacation/256/beach-chair-icon.png" Height="70px" Width="70px"/></td>
+                            <td><asp:ImageButton ID="btnInternetBill" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="http://findicons.com/files/icons/1741/170_dock/256/wifi.png" Height="70px" Width="70px" /></td>
+                            <td><asp:ImageButton ID="btnPartyRest" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="http://www.icone-png.com/png/29/28791.png" Height="70px" Width="70px"/></td>
+                            <td><asp:ImageButton ID="btnVaction" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="http://icons.iconarchive.com/icons/visualpharm/vacation/256/beach-chair-icon.png" Height="70px" Width="70px"/></td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td><asp:ImageButton ID="btnMortgage" runat="server" ImageUrl="http://media.point2.com/p2a/htmltext/092c/05f5/eca0/fa98fd4f9c04e7f26ac3/original.png" Height="70px" Width="70px"/></td>
-                            <td><asp:ImageButton ID="btnTTC" runat="server" ImageUrl="https://hookmeup.files.wordpress.com/2011/01/ttc-logo.png?w=600" Height="70px" Width="70px" /></td>
-                            <td><asp:ImageButton ID="btnCellular" runat="server" ImageUrl="http://images.clipartpanda.com/phone-clipart-mobile-phone-md.png" Height="70px" Width="70px" /></td>
+                            <td><asp:ImageButton ID="btnMortgage" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="http://media.point2.com/p2a/htmltext/092c/05f5/eca0/fa98fd4f9c04e7f26ac3/original.png" Height="70px" Width="70px"/></td>
+                            <td><asp:ImageButton ID="btnTTC" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="https://hookmeup.files.wordpress.com/2011/01/ttc-logo.png?w=600" Height="70px" Width="70px" /></td>
+                            <td><asp:ImageButton ID="btnCellular" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="http://images.clipartpanda.com/phone-clipart-mobile-phone-md.png" Height="70px" Width="70px" /></td>
                             <td></td>
                         </tr>
                     </table>
@@ -146,6 +151,9 @@
 
                 </div>
             </div>
+        </div>
+        <div id="iFooter">
+
         </div>
     </div>
 </asp:Content>
