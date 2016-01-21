@@ -32,6 +32,8 @@
                         <li><a href="#_InsertIncome"><img src="http://images.clipartpanda.com/coin-clip-art-acq7ygzcM.png" height="42" width="42"/>View Summary</a></li>
                         <li><a href="#_InsertBusinessExpense"><img src="https://machetera.files.wordpress.com/2008/05/cash_bucket.png" height="42" width="42"/>View Summary</a></li>
                         <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
+                        <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
+                        <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
                     </ul>
                 </div>
             </div>
