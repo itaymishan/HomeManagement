@@ -11,8 +11,99 @@ namespace HomeManagementSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            FillIncome();
+            FillBucket();
         }
+
+        protected void btnInsertQuickIncomeMobile_Click(object sender, EventArgs e)
+        {
+            ImageButton button = (ImageButton)sender;
+            string buttonId = button.ID;
+            MonthlyIncome income = BuildQuickIncome(buttonId);
+
+            if (null == income)
+            {
+                Response.Write("<script>alert('Failed!!!');</script>");
+                return;
+            }
+            using (var ctx = new HomeMngmentDBEntities())
+            {
+                ctx.MonthlyIncomes.Add(income);
+                ctx.SaveChanges();
+            }
+            Response.Write("<script>alert('Success!!!');</script>");
+        }
+
+        private MonthlyIncome BuildQuickIncome(string buttonId)
+        {
+            MonthlyIncome income = new MonthlyIncome();
+            income.Year         = DateTime.Now.Year;
+            income.Month        = DateTime.Now.Month;
+            income.Amount       = Convert.ToInt32(hiddenFieldAmount.Value);
+            income.Currency     = "CAD";
+            income.Comments     = hiddenFieldComments.Value;
+
+            switch (buttonId)
+            {
+                case "btnAirBnb":
+                    income.IncomeSrc = "AirBnB";
+                    break;
+                case "btnTaxReturn":
+                    income.IncomeSrc = "החזר מס";
+                    break;
+                case "btnRamchal4":
+                    income.IncomeSrc = "שכר דירה רמחל 4";
+                    break;
+                case "btnRamchal1":
+                    income.IncomeSrc = "שכר דירה רמחל 1";
+                    break;
+                case "btnItaySalary":
+                    income.IncomeSrc = "משכורת איתי";
+                    break;
+                case "btnReutSalary":
+                    income.IncomeSrc = "משכורת רעות";
+                    break;
+                default:
+                    break;
+            }
+            return income;
+        }
+
+        private void FillIncome()
+        {
+            int month   = DateTime.Now.Month;
+            int year = DateTime.Now.Year;
+
+            using (var ctx = new HomeMngmentDBEntities())
+            {
+                var query = (from income in ctx.MonthlyIncomes
+                             where (income.Month == month || month == 0) &&
+                                  (year == income.Year || year == 0)
+                             group income by new { income.IncomeSrc, income.Currency }
+                             into grp
+                             select new
+                             {
+                                 grp.Key.IncomeSrc,
+                                 grp.Key.Currency,
+                                 amount = grp.Sum(t => t.Amount),
+                                 count = grp.Count()
+                             }).OrderByDescending(p => p.amount).ToList();
+
+                grdviewMonthIncome.DataSource = query.ToList();
+                grdviewMonthIncome.DataBind();
+            }
+        }
+
+        private void FillBucket()
+        {
+            using (var ctx = new HomeMngmentDBEntities())
+            {
+                var sum_in = ctx.work_expenses_in.Sum(x => x.amount);
+                var sum_out = ctx.work_expenses_out.Sum(x => x.amount);
+                lblBussinnesBucket.Text = (sum_in - sum_out).ToString();
+            }
+        }
+
 
         protected void btnInsertExpenseMobile_Click(object sender, EventArgs e)
         {
@@ -37,10 +128,6 @@ namespace HomeManagementSite
         
         protected void btnInsertQuickExpenseMobile_Click(object sender, EventArgs e)
         {
-            if (hiddenFieldAmount.Value == "")
-            {
-                return;
-            }
             ImageButton button  = (ImageButton)sender;
             string buttonId     = button.ID;
             Expense ex = BuildQuickExpense(buttonId);
@@ -62,6 +149,7 @@ namespace HomeManagementSite
         {
             if (hiddenFieldAmount.Value == "")
             {
+                Response.Write("<script>alert('Failed!!!');</script>");
                 return null;
             }
             Expense ex  = new Expense();

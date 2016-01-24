@@ -4,18 +4,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-<script>
-    function PopUpAmountComments() {
-    var amount = prompt("Please enter amount:");
-    var comments = prompt("Please enter comments:");
-    if (amount != null) {
-        document.getElementById("<%=hiddenFieldAmount.ClientID%>").value = amount;
+
+    <asp:HiddenField ID="hiddenFieldAmount" runat="server" />
+    <asp:HiddenField ID="hiddenFieldComments" runat="server" />
+    <script>
+        function PopUpAmountComments() {
+        var amount = prompt("Please enter amount:");
+        var comments = prompt("Please enter comments:");
+        if (amount != null) {
+            document.getElementById("<%=hiddenFieldAmount.ClientID%>").value = amount;
+        }
+        if (comments != null) {
+            document.getElementById("<%=hiddenFieldComments.ClientID%>").value = comments;
+        }
     }
-    if (comments != null) {
-        document.getElementById("<%=hiddenFieldComments.ClientID%>").value = comments;
-    }
-}
-</script>
+    </script>
     <div id="WebApp">
         <div id="iHeader">
             <a href="#" id="waBackButton">Back</a>
@@ -26,6 +29,7 @@
                 <div class="iMenu">
                     <h3>Choose Action</h3>
                     <ul class="iArrow">
+<<<<<<< Updated upstream
                         <li><a href="#_InsertExpense"><img src="http://www.lessystems.com/wp-content/uploads/2014/04/n2f-travel-expenses-report-icon.png" height="42" width="42"/>Insert Expense</a></li>
                         <li><a href="#_QuickInsert"><img src="http://descargar.info/wp-content/uploads/2014/01/My-Fast-VPN.png" height="42" width="42"/>Quick Insert</a></li>
                         <li><a href="#_ViewSummary"><img src="https://cdn2.iconfinder.com/data/icons/multimedia-17/80/list_summary_options_preferences_app_ui_menu-128.png" height="42" width="42"/>Month Totals</a></li>
@@ -34,29 +38,60 @@
                         <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
                         <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
                         <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
+=======
+                        <li><a href="#_InsertExpense"><img src="http://www.lessystems.com/wp-content/uploads/2014/04/n2f-travel-expenses-report-icon.png" height="50" width="50"/>Insert Expense</a></li>
+                        <li><a href="#_QuickInsertExpense"><img src="http://descargar.info/wp-content/uploads/2014/01/My-Fast-VPN.png" height="50" width="50"/>Quick Insert</a></li>
+                        <li><a href="#_InsertIncome"><img src="http://images.clipartpanda.com/coin-clip-art-acq7ygzcM.png" height="50" width="50"/>Insert Income</a></li>
+                        <li><a href="#_ViewBucket"><img src="https://machetera.files.wordpress.com/2008/05/cash_bucket.png" height="50" width="50"/>My Bucket</a></li>
+                        <li><a href="#_IncomeMonth"><img src="http://mediad.publicbroadcasting.net/p/wcbu/files/201409/money.png" height="50" width="50"/>Month Income</a></li>
+                        <li><a href="#_ViewSummary"><img src="https://cdn2.iconfinder.com/data/icons/multimedia-17/80/list_summary_options_preferences_app_ui_menu-128.png" height="50" width="50"/>Month Totals</a></li>
+>>>>>>> Stashed changes
                     </ul>
                 </div>
             </div>
-            <div class="iLayer" id="waViewSummary" title="View Summary Layer">
+            <div class="iLayer" id="waInsertIncome" title="Insert Income">
                 <div class="iBlock">
-                <h1>View Summary</h1>
+                    <h1>Insert Income</h1>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td><asp:ImageButton ID="btnReutSalary" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickIncomeMobile_Click" ImageUrl="http://www.itsmf.ca/images/fck/Image/NSP/IBM-cmyk_small(1).png" Height="80px" Width="80px"/></td>
+                            <td><asp:ImageButton ID="btnItaySalary" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickIncomeMobile_Click" ImageUrl="https://www.platterz.ca/images/PlatterzLogo.36034897.png" Height="80px" Width="80px" /></td>
+                        </tr>
+                        <tr>
+                            <td><asp:ImageButton ID="btnRamchal1" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickIncomeMobile_Click" ImageUrl="http://findicons.com/files/icons/1261/sticker_system/256/home.png" Height="80px" Width="80px" /></td>
+                            <td><asp:ImageButton ID="btnRamchal4" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickIncomeMobile_Click" ImageUrl="http://www.clker.com/cliparts/K/s/8/f/l/V/simple-orange-house-md.png" Height="80px" Width="80px"/></td>
+
+                        </tr>
+                        <tr>
+                            <td><asp:ImageButton ID="btnTaxReturn" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickIncomeMobile_Click" ImageUrl="http://host26.qnop.net/~virtual/wp-content/themes/sol/images/Icon_Tax.png" Height="80px" Width="80px"/></td>
+                            <td><asp:ImageButton ID="btnAirBnb" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickIncomeMobile_Click" ImageUrl="https://a2.muscache.com/airbnb/static/about/resources/airbnb-logo-293-5b1924f36d180a53fdca602da3e5bc6c.png" Height="80px" Width="80px" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="iLayer" id="waIncomeMonth" title="Monthly Income">
+                <div class="iBlock">
+                    <h1>Monthly Income</h1>
+                    <asp:GridView ID="grdviewMonthIncome" runat="server"></asp:GridView>
                 </div>
             </div>
             <div class="iLayer" id="waInsertBusinessExpense" title="Insert to bucket">
                 <div class="iBlock">
-                <h1>waInsertBusinessExpense</h1>
+                    <h1>waInsertBusinessExpense</h1>
                 </div>
             </div>
             <div class="iLayer" id="waViewLastTransactions" title="ViewLastTransactions">
                 <div class="iBlock">
-                <h1>ViewLastTransactions</h1>
+                    <h1>ViewLastTransactions</h1>
                 </div>
             </div>
-            <div class="iLayer" id="waQuickInsert" title="Quick Insert">
+            <div class="iLayer" id="waViewBucket" title="Bucket">
                 <div class="iBlock">
-                    <asp:HiddenField ID="hiddenFieldAmount" runat="server" />
-                    <asp:HiddenField ID="hiddenFieldComments" runat="server" />
-
+                    <h1><asp:Label ID="lblBussinnesBucket" runat="server" Text="NA" Font-Size="XX-Large"></asp:Label></h1>
+                </div>
+            </div>
+            <div class="iLayer" id="waQuickInsertExpense" title="Quick Insert Expense">
+                <div class="iBlock">
                     <table style="width: 100%;">
                         <tr>
                             <td><asp:ImageButton ID="btnGrocery" runat="server" OnClientClick="PopUpAmountComments()" OnClick="btnInsertQuickExpenseMobile_Click" ImageUrl="https://d30y9cdsu7xlg0.cloudfront.net/png/28468-200.png" Height="70px" Width="70px"/></td>

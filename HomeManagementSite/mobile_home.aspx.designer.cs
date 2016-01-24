@@ -31,6 +31,78 @@ namespace HomeManagementSite {
         protected global::System.Web.UI.WebControls.HiddenField hiddenFieldComments;
         
         /// <summary>
+        /// btnReutSalary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnReutSalary;
+        
+        /// <summary>
+        /// btnItaySalary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnItaySalary;
+        
+        /// <summary>
+        /// btnRamchal1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnRamchal1;
+        
+        /// <summary>
+        /// btnRamchal4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnRamchal4;
+        
+        /// <summary>
+        /// btnTaxReturn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnTaxReturn;
+        
+        /// <summary>
+        /// btnAirBnb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnAirBnb;
+        
+        /// <summary>
+        /// grdviewMonthIncome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdviewMonthIncome;
+        
+        /// <summary>
+        /// lblBussinnesBucket control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBussinnesBucket;
+        
+        /// <summary>
         /// btnGrocery control.
         /// </summary>
         /// <remarks>
