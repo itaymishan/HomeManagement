@@ -37,12 +37,6 @@
                         <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
                         <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
                         <li><a href="#_x3"><img src="/" height="42" width="42"/>View Summary</a></li>
-                        <li><a href="#_InsertExpense"><img src="http://www.lessystems.com/wp-content/uploads/2014/04/n2f-travel-expenses-report-icon.png" height="50" width="50"/>Insert Expense</a></li>
-                        <li><a href="#_QuickInsertExpense"><img src="http://descargar.info/wp-content/uploads/2014/01/My-Fast-VPN.png" height="50" width="50"/>Quick Insert</a></li>
-                        <li><a href="#_InsertIncome"><img src="http://images.clipartpanda.com/coin-clip-art-acq7ygzcM.png" height="50" width="50"/>Insert Income</a></li>
-                        <li><a href="#_ViewBucket"><img src="https://machetera.files.wordpress.com/2008/05/cash_bucket.png" height="50" width="50"/>My Bucket</a></li>
-                        <li><a href="#_IncomeMonth"><img src="http://mediad.publicbroadcasting.net/p/wcbu/files/201409/money.png" height="50" width="50"/>Month Income</a></li>
-                        <li><a href="#_ViewSummary"><img src="https://cdn2.iconfinder.com/data/icons/multimedia-17/80/list_summary_options_preferences_app_ui_menu-128.png" height="50" width="50"/>Month Totals</a></li>
                     </ul>
                 </div>
             </div>
