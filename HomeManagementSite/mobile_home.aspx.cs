@@ -108,8 +108,8 @@ namespace HomeManagementSite
         protected void btnInsertExpenseMobile_Click(object sender, EventArgs e)
         {
             Expense ex = new Expense();
-            ex.Year = Convert.ToInt32(drpYear.SelectedValue);
-            ex.Month = Convert.ToInt32(drpMonth.SelectedValue);
+            ex.Year = DateTime.Now.Year;
+            ex.Month = DateTime.Now.Month;
             ex.Category = drpCategory.SelectedValue;
             ex.Currency = drpCurrency.SelectedValue;
             ex.Comments = txtComments.Text;
@@ -153,8 +153,8 @@ namespace HomeManagementSite
                 return null;
             }
             Expense ex  = new Expense();
-            ex.Year     = Convert.ToInt32(drpYear.SelectedValue);
-            ex.Month    = Convert.ToInt32(drpMonth.SelectedValue);
+            ex.Year     = DateTime.Now.Year;
+            ex.Month    = DateTime.Now.Month;
             ex.Currency = drpCurrency.SelectedValue;
             ex.Person   = "איתי";
             ex.ExpenseType  = "משותף";
@@ -184,7 +184,7 @@ namespace HomeManagementSite
                     ex.IsLuxury = "כן";
                     break;
                 case "btnVaction":
-                    ex.Category = "ZipCar";
+                    ex.Category = "חופשה";
                     ex.IsLuxury = "כן";
                     break;
                 case "btnMortgage":
@@ -206,4 +206,4 @@ namespace HomeManagementSite
             return ex;
         }
     }
-} 
+}
